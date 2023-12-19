@@ -4,7 +4,7 @@ const axios = require('axios');
 const merchant_id = "PGTESTPAYUAT"
 const salt_key = "099eb0cd-02cf-4e2a-8aca-3e6c6aff0399"
 const newPayment = async (req, res) => {
-const API = "https://phonepepgserver.onrender.com";
+const API = "https://phonepaytest.onrender.com";
 res.send("hii")
     try {
         const merchantTransactionId = req.body.transactionId;
@@ -85,10 +85,10 @@ const checkStatus = async(req, res) => {
     // CHECK PAYMENT TATUS
     await axios.request(options).then(async(response) => {
         if (response.data.success === true) {
-            const url = `https://phonepepgserver.onrender.com/success`
+            const url = `https://phonepaytest.onrender.com/success`
             return res.redirect(url)
         } else {
-            const url = `https://phonepepgserver.onrender.com/failure`
+            const url = `https://phonepaytest.onrender.com/failure`
             return res.redirect(url)
         }
     })
