@@ -6,7 +6,7 @@ import phonepe from '../../image/phonepe.png'
 
 const Phonepe = () => {
     const [loading2, setLoading2] = useState(false);
-    const API = 'https://phonepepgserver.onrender.com';
+    // const API = 'https://phonepepgserver.onrender.com';
     const data ={
         name: 'Aman',
         amount: 1,
@@ -18,7 +18,7 @@ const Phonepe = () => {
     const handlePayment = async (e)=>{
         e.preventDefault();
         setLoading2(true);
-        await axios.post(API+'/api/payment', {...data}).then(res => {  
+        await axios.post('/api/payment', {...data}).then(res => {  
         setTimeout(() => {
             setLoading2(false);
         }, 1500);
