@@ -5,7 +5,7 @@ const merchant_id = "PGTESTPAYUAT"
 const salt_key = "099eb0cd-02cf-4e2a-8aca-3e6c6aff0399"
 const newPayment = async (req, res) => {
 const API = "https://phonepaytest.onrender.com";
-res.send("hii")
+
     try {
         const merchantTransactionId = req.body.transactionId;
         const data = {
